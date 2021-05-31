@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Preview in Vanilla Javascript</title>
+</head>
+<body>
+    
+    <input type="file" id="input_img">
+    <img id="img" style="width:250px; height:250px;" alt="">
+
+
+    <script>
+
+const inpt_img = document.getElementById('input_img');
+const img_preview = document.getElementById('img');
+
+inpt_img.onchange = () =>{
+    let img_url = URL.createObjectURL(inpt_img.files[0]);
+    img_preview.src = img_url;
+}
+
+    </script>
+
+</body>
+</html>
